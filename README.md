@@ -13,7 +13,9 @@ If the browser does not support placeholder, then this script will:
 
 ## Usage
 
-  $('input[placeholder], textarea[placeholder]').placeHolder();
+```javascript
+$('input[placeholder], textarea[placeholder]').placeHolder();
+```
   
 Runs the plugin for each input/textarea element with a placeholder attribute.
 
