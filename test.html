@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="placeholder.min.js"></script>
+</head>
+<body>
+	<form>
+		<div>
+			<input name="field1" type="text" placeholder="This is a placeholder" />
+		</div>
+
+		<div>
+			<input name="field2" type="text" />
+		</div>
+
+		<div>
+			<input name="field3" type="text" placeholder="This is another placeholder" />
+		</div>
+
+		<div>
+			<textarea name="field4" style="width: 400px; height: 200px;" placeholder="This is the placeholder for a textarea"></textarea>
+		</div>
+
+		<div>
+			<input type="submit" value="Submit" class="submit" />
+		</div>
+	</form>
+  
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('input[placeholder], textarea[placeholder]').placeHolder();
+			$('form').submit(function(e) { 
+				var frm = $(this);
+				alert(frm.serialize());
+				e.preventDefault();
+			});
+		});
+	</script>
+  
+</body>
+</html>
